@@ -1,14 +1,13 @@
+
+const homeRoute=require('./home.route.js')
+const productsRoute=require('./product.route.js')
 module.exports.index=(app)=>{
 
 
-    app.get('/',(req,res)=>{
-        res.render('client/pages/home/index.pug')
-    })
+    app.use('/',homeRoute)
     
     
-    app.get('/product',(req,res)=>{
-        res.render('client/pages/products/index.pug')
-    })
+    app.use('/product',productsRoute)
     
     
 }
