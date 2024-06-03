@@ -6,14 +6,9 @@ const port=3000;
 app.set('views','./views');
 app.set('views engine','pug');
 
-app.get('/',(req,res)=>{
-    res.render('client/pages/home/index.pug')
-})
+const routeClient=require('./routes/clients/index.route');
 
-
-app.get('/product',(req,res)=>{
-    res.render('client/pages/products/index.pug')
-})
+routeClient.index(app);
 
 
 app.listen(port,()=>{
