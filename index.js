@@ -3,13 +3,16 @@ const app=express();
 const port=3000;
 
 
+app.set('views','./views');
+app.set('views engine','pug');
+
 app.get('/',(req,res)=>{
-    res.send('main')
+    res.render('client/pages/home/index.pug')
 })
 
 
 app.get('/product',(req,res)=>{
-    res.send('product')
+    res.render('client/pages/products/index.pug')
 })
 
 
