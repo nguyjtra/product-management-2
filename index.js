@@ -5,6 +5,11 @@ const app=express();
 const port=process.env.PORT;
 
 
+const mongoose=require('mongoose');
+
+const database=require('./config/database.js')
+database.connect();
+
 app.set('views','./views');
 app.set('views engine','pug');
 
